@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewLoginSignup"
+            android:layout_width="210dp"
+            android:layout_height="184dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="100dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/twitterlogo" />
+
+        <AutoCompleteTextView
+            android:id="@+id/usernameText"
+            android:layout_width="365dp"
+            android:layout_height="73dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="Username"
+            android:textAllCaps="false" />
+
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="365dp"
+            android:layout_height="73dp"
+            android:layout_alignBottom="@id/usernameText"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="-90dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/loginSignupButt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/passwordText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-100dp"
+            android:backgroundTint="#2196F3"
+            android:onClick="logInOrSignup"
+            android:text="Log in/Sign up"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
